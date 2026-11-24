@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#f4f6fb] text-slate-800 font-sans antialiased selection:bg-purple-600 selection:text-white overflow-x-hidden min-h-screen;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+/* Glassmorphism & Custom Styling Utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-panel-dark {
+  background: rgba(20, 21, 41, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Soft Glow Shadow Utilities */
+.shadow-glow-purple {
+  box-shadow: 0 10px 30px -5px rgba(124, 58, 237, 0.25);
+}
+
+.shadow-glow-emerald {
+  box-shadow: 0 10px 30px -5px rgba(16, 185, 129, 0.25);
+}
+
+/* Pulsing Status Dot Animation */
+@keyframes pulse-emerald {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.25);
+  }
+}
+
+.animate-pulse-emerald {
+  animation: pulse-emerald 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7c3aed;
+}
+
+/* Print Styles for AMS Gate Pass (Exact 20 cm x 8.5 cm Gate Pass Size) */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .print-container, .print-container * {
+    visibility: visible;
+  }
+  .print-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background: transparent !important;
+  }
+  .gate-pass-card {
+    width: 20cm !important;
+    max-width: 20cm !important;
+    min-width: 20cm !important;
+    height: 8.5cm !important;
+    max-height: 8.5cm !important;
+    min-height: 8.5cm !important;
+    margin: 0 auto !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    box-shadow: none !important;
+    border: 2px solid #000 !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-sizing: border-box !important;
+    padding: 4px 10px 4px 10px !important;
+    overflow: hidden !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-cut-line {
+    display: block !important;
+    border-top: 1px dashed #475569;
+    margin: 2mm auto;
+    width: 20cm;
+    text-align: center;
+  }
+  @page {
+    margin: 4mm 5mm;
+    size: A4 portrait;
+  }
+}
+

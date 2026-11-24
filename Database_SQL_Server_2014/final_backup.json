@@ -1,0 +1,43 @@
+{
+  "system": "AMS Enterprise Visitor Management System (VMS)",
+  "databaseEngine": "Microsoft SQL Server 2014 (12.x) / 2016+ / Azure SQL",
+  "backupType": "Final Clean Production Master Backup",
+  "mdfPath": "C:\\Users\\Smit Patel\\Desktop\\smit\\Database_SQL_Server_2014\\vms_of_ams.mdf",
+  "ldfPath": "C:\\Users\\Smit Patel\\Desktop\\smit\\Database_SQL_Server_2014\\vms_of_ams_log.ldf",
+  "generatedAt": "2026-09-25T11:10:00Z",
+  "author": "Smit Patel",
+  "database": "vms_of_ams",
+  "users": [
+    { "id": "USR-01", "username": "admin", "name": "Admin User", "role": "Super Admin", "password": "admin@123" },
+    { "id": "USR-02", "username": "SA", "name": "SA Super Admin", "role": "Super Admin", "password": "admin123" },
+    { "id": "USR-03", "username": "security", "name": "Security Officer", "role": "Security", "password": "AMS@1234" },
+    { "id": "USR-04", "username": "aashis", "name": "Aashis", "role": "Employee", "password": "AMS@1234" }
+  ],
+  "companies": [
+    { "id": "CMP-01", "code": "HQ", "name": "Main Enterprise HQ", "status": "Active" },
+    { "id": "CMP-02", "code": "TECH", "name": "Tech Innovations", "status": "Active" },
+    { "id": "CMP-03", "code": "LOG", "name": "Global Logistics", "status": "Active" }
+  ],
+  "branches": [
+    { "id": "BR-01", "code": "HQ", "name": "Main Building HQ", "location": "Tower A", "status": "Active" },
+    { "id": "BR-02", "code": "WEST", "name": "West Gate Terminal", "location": "Gate 2", "status": "Active" }
+  ],
+  "departments": [
+    { "id": "DEP-01", "code": "PUR", "name": "Purchase", "headName": "Purchase Manager", "status": "Active" },
+    { "id": "DEP-02", "code": "QA", "name": "Quality", "headName": "Quality Head", "status": "Active" },
+    { "id": "DEP-03", "code": "PRD", "name": "Production", "headName": "Production Head", "status": "Active" },
+    { "id": "DEP-04", "code": "FAC", "name": "Facility", "headName": "Facility Manager", "status": "Active" },
+    { "id": "DEP-05", "code": "IT", "name": "IT", "headName": "IT Administrator", "status": "Active" },
+    { "id": "DEP-06", "code": "IC", "name": "IC", "headName": "IC Lead", "status": "Active" },
+    { "id": "DEP-07", "code": "ACC", "name": "Accounts", "headName": "Accounts Head", "status": "Active" },
+    { "id": "DEP-08", "code": "LOG", "name": "Logistics", "headName": "Logistics Head", "status": "Active" },
+    { "id": "DEP-09", "code": "WHS", "name": "Warehouse", "headName": "Warehouse Head", "status": "Active" },
+    { "id": "DEP-10", "code": "R&D", "name": "R&D", "headName": "R&D Director", "status": "Active" },
+    { "id": "DEP-11", "code": "MKT", "name": "Marketing", "headName": "Marketing Head", "status": "Active" },
+    { "id": "DEP-12", "code": "CLN", "name": "Clinical", "headName": "Clinical Affairs Lead", "status": "Active" },
+    { "id": "DEP-13", "code": "ENG", "name": "Engineering", "headName": "Chief Engineer", "status": "Active" },
+    { "id": "DEP-14", "code": "NDL", "name": "Needle", "headName": "Needle Division Head", "status": "Active" },
+    { "id": "DEP-15", "code": "OTH", "name": "Other", "headName": "General Management", "status": "Active" }
+  ],
+  "visitors": []
+}
